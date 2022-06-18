@@ -1,7 +1,10 @@
 //-----------------------------------------------variables--------------------------------------------------------------
 $mainColor: #333333;
 $grayColor: #828282;
+$gray2Color: #BDBDBD;
+$gray3Color: #E0E0E0;
 $whiteColor: #FFFFFF;
+$blueColor: #2F80ED;
 $containerWidth: 1440px;
 $mainFont: 'Poppins', sans-serif;
 $secondaryFont: 'Noto Sans', sans-serif;
@@ -25,7 +28,8 @@ h1, h2, h3, h4, h5, h6{
   font-weight: inherit;
   font-size: inherit;
 }
-html, body{
+body{
+  padding: 15px;
   height: 100%;
   line-height: 1;
   font-size: 20px;
@@ -40,10 +44,123 @@ html, body{
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
 }
 .container{
   max-width: $containerWidth;
   margin: 0 auto;
   box-sizing: content-box;
   padding: 0 15px;
+}
+//-----------------------------------------------header-----------------------------------------------------------------
+.header {
+  width: 100%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  &__container {
+    display: flex;
+    min-height: 69px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $whiteColor;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  &__logo {
+    display: flex;
+    gap: 12px;
+    &__image {
+      height: 29px;
+      width: 32px;
+    }
+    &__title {
+      font-weight: 600;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: $mainColor;
+      text-align: end;
+    }
+  }
+  &__search-date {
+    display: flex;
+    align-items: center;
+  }
+  &__search {
+    &__form {
+      display: flex;
+      justify-content: space-between;
+      padding: 2px 0 2px 2px;
+      width: 338px;
+      height: 34px;
+      border-radius: 8px;
+      box-shadow:(0px 4px 12px rgba(0, 0, 0, 0.1));
+    }
+    &__input {
+      width: 250px;
+      height: 30px;
+      color: #BDBDBD;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 15px;
+      &::placeholder {
+        color: #BDBDBD;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 15px;
+      }
+      &:focus::placeholder {
+        color: transparent;
+      }
+    }
+    &__button {
+      width: 74px;
+      height: 30px;
+      background-color: $blueColor;
+      border-radius: 8px;
+      color: $whiteColor;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 15px;
+      text-align: center;
+    }
+  }
+  &__separator {
+    width: 35px;
+    height: 0;
+    border: 1px solid $gray3Color;
+    transform: rotate(90deg);
+  }
+  &__date {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow:(0px 4px 12px rgba(0, 0, 0, 0.1));
+    padding: 2px;
+    min-width: 235px;
+    height: 34px;
+  }
+}
+.date {
+  color: $mainColor;
+  &__weekday {
+    margin-right: 10px;
+  }
+  &__day {
+    margin-right: 5px;
+  }
+  &__month {
+    margin-right: 10px;
+  }
+  &__hours {
+    color: $blueColor;
+  }
+  &__divider {
+    color: $blueColor;
+  }
+  &__minutes {
+    color: $blueColor;
+  }
 }
