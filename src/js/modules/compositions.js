@@ -6,7 +6,14 @@ function buildDate (){
   const h2MinutesElement = document.querySelector('.date__minutes');
   setInterval(() => {
     let date = new Date();
-    h2DayElement.innerHTML = `${new Date().toDateString()}`;
+    let width = window.innerWidth;
+    if (width < 550) {
+      h2DayElement.innerHTML = '';
+    } else if (width < 750) {
+        h2DayElement.innerHTML = `${date.getDate() < 10 ? '0' + date.getDate() : date.getDate()}.${date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth()}.${date.getFullYear()}`;
+    } else {
+      h2DayElement.innerHTML = `${date.toDateString()}`;
+    }
     h2HoursElement.innerHTML = `${date.getHours() < 10 ? '0' + date.getHours() : date.getHours()}`;
     h2DividerElement.classList.toggle('hide');
     h2MinutesElement.innerHTML = `${date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()}`;
