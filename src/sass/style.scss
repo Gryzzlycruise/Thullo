@@ -9,26 +9,26 @@ $containerWidth: 1440px;
 $mainFont: 'Poppins', sans-serif;
 $secondaryFont: 'Noto Sans', sans-serif;
 //-----------------------------------------------cleaning elements------------------------------------------------------
-*, *::before, *::after{
+*, *::before, *::after {
   padding: 0;
   margin: 0;
   border: 0;
   box-sizing: border-box;
 }
-a{
+a {
   text-decoration: none;
 }
-ul, ol, li{
+ul, ol, li {
   list-style: none;
 }
-img{
+img {
   vertical-align: top;
 }
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
   font-size: inherit;
 }
-body{
+body {
   padding: 15px;
   height: 100%;
   line-height: 1;
@@ -39,14 +39,14 @@ body{
   font-family: $mainFont;
 }
 //-----------------------------------------------tech classes-----------------------------------------------------------
-.wrapper{
+.wrapper {
   min-height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 
 }
-.container{
+.container {
   max-width: $containerWidth;
   margin: 0 auto;
   box-sizing: content-box;
@@ -139,20 +139,14 @@ body{
     border-radius: 8px;
     box-shadow:(0px 4px 12px rgba(0, 0, 0, 0.1));
     padding: 2px;
-    min-width: 235px;
+    min-width: 210px;
     height: 34px;
   }
 }
 .date {
   color: $mainColor;
-  &__weekday {
-    margin-right: 10px;
-  }
   &__day {
-    margin-right: 5px;
-  }
-  &__month {
-    margin-right: 10px;
+    margin-right: 15px;
   }
   &__hours {
     color: $blueColor;
@@ -163,4 +157,7 @@ body{
   &__minutes {
     color: $blueColor;
   }
+}
+.hide {
+  color: transparent;
 }
