@@ -1,0 +1,49 @@
+//-----------------------------------------------variables--------------------------------------------------------------
+$mainColor: #333333;
+$grayColor: #828282;
+$whiteColor: #FFFFFF;
+$containerWidth: 1440px;
+$mainFont: 'Poppins', sans-serif;
+$secondaryFont: 'Noto Sans', sans-serif;
+//-----------------------------------------------cleaning elements------------------------------------------------------
+*, *::before, *::after{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+ul, ol, li{
+  list-style: none;
+}
+img{
+  vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6{
+  font-weight: inherit;
+  font-size: inherit;
+}
+html, body{
+  height: 100%;
+  line-height: 1;
+  font-size: 20px;
+  background-color: $mainColor;
+  color: $grayColor;
+  font-weight: 400;
+  font-family: $mainFont;
+}
+//-----------------------------------------------tech classes-----------------------------------------------------------
+.wrapper{
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.container{
+  max-width: $containerWidth;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding: 0 15px;
+}
