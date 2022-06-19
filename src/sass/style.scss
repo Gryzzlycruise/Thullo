@@ -5,6 +5,9 @@ $gray2Color: #BDBDBD;
 $gray3Color: #E0E0E0;
 $whiteColor: #FFFFFF;
 $blueColor: #2F80ED;
+$blueButtonColor: #DAE4FD;
+$blueWhiteColor: #F8F9FD;
+$redColor: #EB5757;
 $containerWidth: 1440px;
 $mainFont: 'Poppins', sans-serif;
 $secondaryFont: 'Noto Sans', sans-serif;
@@ -44,7 +47,6 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
 }
 .container {
   max-width: $containerWidth;
@@ -52,10 +54,21 @@ body {
   box-sizing: border-box;
   padding: 0 15px;
 }
+.button {
+  font-family: $secondaryFont;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.035em;
+}
 //-----------------------------------------------header-----------------------------------------------------------------
 .header {
   width: 100%;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  z-index: 1;
   &__container {
     display: flex;
     min-height: 69px;
@@ -216,5 +229,62 @@ body {
   }
   .header__select-date {
     gap: 10px;
+  }
+}
+//-----------------------------------------------main-block-----------------------------------------------------------------
+.main-block {
+  width: 100%;
+  &__container {
+    display: flex;
+    min-height: 90vh;
+    justify-content: space-between;
+    background-color: $whiteColor;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 24px 24px 0;
+    &__background {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px 24px 0;
+      min-width: 100%;
+      min-height: 90%;
+      background-color: $blueWhiteColor;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 32%;
+    &__title {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    &__title h2{
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: $mainColor;
+      margin-bottom: 17px;
+    }
+  }
+}
+.list {
+  &__todo {
+    &__button{
+      display: flex;
+      justify-content: space-between;
+      color: $blueColor;
+      background-color: $blueButtonColor;
+    }
+  }
+  &__completed {
+    &__button {
+      color: $redColor;
+      background-color: rgba(235, 87, 87, 0.1);
+    }
   }
 }
