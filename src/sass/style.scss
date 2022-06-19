@@ -1,6 +1,8 @@
 //-----------------------------------------------variables--------------------------------------------------------------
 $mainColor: #333333;
+$blackColor: #000000;
 $grayColor: #828282;
+$grayTextColor: #4F4F4F;
 $gray2Color: #BDBDBD;
 $gray3Color: #E0E0E0;
 $whiteColor: #FFFFFF;
@@ -32,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
 }
 body {
-  padding: 15px;
+  padding: 5px;
   height: 100%;
   line-height: 1;
   font-size: 20px;
@@ -231,7 +233,7 @@ body {
     gap: 10px;
   }
 }
-//-----------------------------------------------main-block-----------------------------------------------------------------
+//-----------------------------------------------main-block-------------------------------------------------------------
 .main-block {
   width: 100%;
   &__container {
@@ -245,6 +247,7 @@ body {
     &__background {
       display: flex;
       justify-content: space-between;
+      gap: 1vw;
       padding: 24px 24px 0;
       min-width: 100%;
       min-height: 90%;
@@ -270,6 +273,16 @@ body {
       color: $mainColor;
       margin-bottom: 17px;
     }
+    &__cards {
+      max-height: 68vh;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5vw;
+      overflow: scroll;
+      &__in-progress {
+        max-height: 74vh;
+      }
+    }
   }
 }
 .list {
@@ -285,6 +298,123 @@ body {
     &__button {
       color: $redColor;
       background-color: rgba(235, 87, 87, 0.1);
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-block__container {
+    &__background {
+      flex-wrap: wrap;
+      gap: 4vw;
+      padding-bottom: 24px;
+    }
+  }
+  .main-block__list {
+    &__title h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+//-----------------------------------------------card-template----------------------------------------------------------
+.card-template {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: $whiteColor;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 12px;
+  &:hover>button {
+    opacity: 1;
+  }
+  &__title{
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: -0.035em;
+    color: $blackColor;
+    margin-bottom: 10px;
+  }
+  &__button {
+    border-radius: 8px;
+    background-color: $whiteColor;
+    opacity: 0;
+    &__image {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__description {
+    font-family: $secondaryFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.035em;
+    color: $grayTextColor;
+    margin-bottom: 10px;
+  }
+  &__user {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.035em;
+    color: $blueColor;
+  }
+  &__created-at {
+    font-family: $secondaryFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: -0.035em;
+    color: $mainColor;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .card-template {
+    &__title {
+      font-size: 16px;
+    }
+    &__description {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+@media screen and (max-width: 910px) {
+  .card-template {
+    &__title {
+      font-size: 20px;
+      letter-spacing: -0.035em;
+    }
+    &__description {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .card-template {
+    &__title {
+      font-size: 18px;
+      letter-spacing: -0.035em;
+    }
+    &__description {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .card-template {
+    &__title {
+      font-size: 16px;
     }
   }
 }
