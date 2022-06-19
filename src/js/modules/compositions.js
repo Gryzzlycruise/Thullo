@@ -15,7 +15,7 @@ function buildDate (){
       h2DayElement.innerHTML = `${date.toDateString()}`;
     }
     h2HoursElement.innerHTML = `${date.getHours() < 10 ? '0' + date.getHours() : date.getHours()}`;
-    h2DividerElement.classList.toggle('hide');
+    h2DividerElement.classList.toggle('transparent');
     h2MinutesElement.innerHTML = `${date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()}`;
   }, 1000)
 }

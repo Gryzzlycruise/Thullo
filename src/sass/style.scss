@@ -94,6 +94,7 @@ body {
       height: 34px;
       border-radius: 8px;
       box-shadow:(0px 4px 12px rgba(0, 0, 0, 0.1));
+      position: relative;
     }
     &__input {
       min-width: 250px;
@@ -125,6 +126,20 @@ body {
       font-size: 10px;
       line-height: 15px;
       text-align: center;
+    }
+    &__span {
+      background-color: red;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      color: $whiteColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      font-size: 10px;
+      left: 316px;
+      bottom: 21px;
     }
   }
   &__separator {
@@ -159,12 +174,20 @@ body {
     color: $blueColor;
   }
 }
-.hide {
+.transparent {
   color: transparent;
 }
+.hide {
+  display: none;
+}
 @media screen and (max-width: 750px) {
-  .header__search__input{
-    min-width: 100px;
+  .header__search {
+    &__input{
+      min-width: 100px;
+    }
+    &__span {
+      left: 170px;
+    }
   }
 }
 @media screen and (max-width: 550px) {
