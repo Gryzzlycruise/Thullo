@@ -18,7 +18,14 @@
           <img class="header__logo__image" src="./assets/trello-seeklogo.com.svg" alt="Logo">
           <h2 class="header__logo__title">Thullo</h2>
         </div>
-        <div class="header__search-date">
+        <div class="header__select-date">
+          <select class="header__select">
+            <option class="header__select__option" value="value1" selected>Sort by</option>
+            <option class="header__select__option" value="value2">Newest</option>
+            <option class="header__select__option" value="value2">Oldest</option>
+            <option class="header__select__option" value="value2">Priority</option>
+          </select>
+          <hr class="header__separator">
           <div class="header__search">
             <form class="header__search__form">
               <input type="text" class="header__search__input" placeholder="Keyword...">
@@ -26,7 +33,7 @@
               <span class="header__search__span hide">0</span>
             </form>
           </div>
-          <hr class="header__separator">
+          <hr class="header__separator separator2">
           <div class="header__date date">
             <h2 class="date__day">00</h2>
             <h2 class="date__hours">00</h2>

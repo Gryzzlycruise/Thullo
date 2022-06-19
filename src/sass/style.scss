@@ -68,8 +68,9 @@ body {
   &__logo {
     display: flex;
     gap: 12px;
+    margin-right: 20px;
     &__image {
-      height: 29px;
+      height: 34px;
       width: 32px;
     }
     &__title {
@@ -78,19 +79,26 @@ body {
       font-size: 18px;
       line-height: 27px;
       color: $mainColor;
-      text-align: end;
+      display: flex;
+      align-items: center;
     }
   }
-  &__search-date {
+  &__select-date {
     display: flex;
     align-items: center;
   }
+  &__select {
+    height: 34px;
+    border-radius: 8px;
+    box-shadow:(0px 4px 12px rgba(0, 0, 0, 0.1));
+    color: $blueColor;
+  }
   &__search {
+    max-width: 338px;
     &__form {
       display: flex;
       justify-content: space-between;
       padding: 2px 0 2px 2px;
-      max-width: 338px;
       height: 34px;
       border-radius: 8px;
       box-shadow:(0px 4px 12px rgba(0, 0, 0, 0.1));
@@ -180,7 +188,7 @@ body {
 .hide {
   display: none;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 860px) {
   .header__search {
     &__input{
       min-width: 100px;
@@ -190,13 +198,23 @@ body {
     }
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   .date__day{
     margin-right: 0;
   }
 }
-@media screen and (max-width: 450px) {
-  .header__logo__title{
+@media screen and (max-width: 550px) {
+  .header__container {
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .header__separator {
     display: none;
+  }
+  .header__select-date {
+    gap: 10px;
   }
 }

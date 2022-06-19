@@ -7,9 +7,9 @@ function buildDate (){
   setInterval(() => {
     let date = new Date();
     let width = window.innerWidth;
-    if (width < 550) {
+    if (width < 650) {
       h2DayElement.innerHTML = '';
-    } else if (width < 750) {
+    } else if (width < 860) {
         h2DayElement.innerHTML = `${date.getDate() < 10 ? '0' + date.getDate() : date.getDate()}.${date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth()}.${date.getFullYear()}`;
     } else {
       h2DayElement.innerHTML = `${date.toDateString()}`;
