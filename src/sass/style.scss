@@ -337,11 +337,13 @@ body {
     letter-spacing: -0.035em;
     color: $blackColor;
     margin-bottom: 10px;
+    max-width: 90%;
   }
   &__button {
     border-radius: 8px;
     background-color: $whiteColor;
     opacity: 0;
+    max-height: 24px;
     &__image {
       width: 24px;
       height: 24px;
@@ -387,9 +389,10 @@ body {
     }
   }
 }
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 890px) {
   .card-template {
     &__title {
+      width: 88%;
       font-size: 20px;
       letter-spacing: -0.035em;
     }
