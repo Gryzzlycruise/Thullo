@@ -22,8 +22,9 @@
           <select class="header__select">
             <option class="header__select__option" value="value1" selected>Sort by</option>
             <option class="header__select__option" value="value2">Newest</option>
-            <option class="header__select__option" value="value2">Oldest</option>
-            <option class="header__select__option" value="value2">Priority</option>
+            <option class="header__select__option" value="value3">Oldest</option>
+            <option class="header__select__option" value="value4">Priority</option>
+            <option class="header__select__option" value="value5">Default</option>
           </select>
           <hr class="header__separator">
           <div class="header__search">
@@ -242,6 +243,30 @@
         </div>
       </div>
     </section>
+    <div class="popup">
+      <div class="popup__body">
+        <form action="" class="popup__form form">
+          <input type="text" class="form__title" placeholder="Enter title ...">
+          <select class="form__select priority">
+            <option class="priority__option" value="value1" selected>Priority</option>
+            <option class="priority__option" value="value2">High</option>
+            <option class="priority__option" value="value3">Middle</option>
+            <option class="priority__option" value="value4">Low</option>
+          </select>
+          <textarea class="form__textarea" cols="30" rows="10" placeholder="Enter description ..."></textarea>
+          <select class="form__select users">
+            <option class="users__option" value="value1" selected>Select user</option>
+            <option class="users__option" value="value2">User1</option>
+            <option class="users__option" value="value3">User2</option>
+            <option class="users__option" value="value4">User3</option>
+          </select>
+          <div class="form__buttons">
+            <button class="form__button cancel" data-role="cancel">Cancel</button>
+            <button class="form__button confirm" data-role="confirm">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </body>
 </html>
