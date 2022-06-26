@@ -4,6 +4,8 @@
   width: 100%;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
   z-index: 1;
+  position: sticky;
+  top: -1px;
   &__container {
     display: flex;
     min-height: 69px;
