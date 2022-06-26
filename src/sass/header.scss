@@ -136,7 +136,7 @@
 .hide {
   display: none;
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: $tabletWidth) {
   .header__search {
     &__input{
       min-width: 100px;
@@ -146,19 +146,19 @@
     }
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: $tabletDataTransformWidth) {
   .date__day{
     margin-right: 0;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: $tabletHeaderTransformWidth) {
   .header__container {
     flex-wrap: wrap;
     justify-content: center;
     min-height: 100px;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: $mobileTransformWidth) {
   .header__separator {
     display: none;
   }

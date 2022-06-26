@@ -62,7 +62,7 @@
     color: $mainColor;
   }
 }
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: $desktopTransformWidth) {
   .card-template {
     &__title {
       font-size: 16px;
@@ -73,7 +73,7 @@
     }
   }
 }
-@media screen and (max-width: 890px) {
+@media screen and (max-width: $tabletWidth) {
   .card-template {
     &__title {
       width: 88%;
@@ -86,7 +86,7 @@
     }
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $mobileWidth) {
   .card-template {
     &__title {
       font-size: 18px;
@@ -98,7 +98,7 @@
     }
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: $mobileTransformWidth) {
   .card-template {
     &__title {
       font-size: 16px;

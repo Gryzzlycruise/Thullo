@@ -1,4 +1,4 @@
 //-------------------------------------------------Import---------------------------------------------------------------
-import {buildDate} from "./modules/compositions.js";
+import {startApplication} from "./modules/compositions.js";
 //-------------------------------------------------Elements-------------------------------------------------------------
-buildDate();
+startApplication();
