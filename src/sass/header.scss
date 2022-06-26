@@ -1,0 +1,168 @@
+@import "variables.scss";
+//-----------------------------------------------header-----------------------------------------------------------------
+.header {
+  width: 100%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+  &__container {
+    display: flex;
+    min-height: 69px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $whiteColor;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  &__logo {
+    display: flex;
+    gap: 12px;
+    margin-right: 20px;
+    &__image {
+      height: 34px;
+      width: 32px;
+    }
+    &__title {
+      font-weight: 600;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: $mainColor;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__select-date {
+    display: flex;
+    align-items: center;
+  }
+  &__select {
+    height: 34px;
+    border-radius: 8px;
+    box-shadow:(0px 4px 12px rgba(0, 0, 0, 0.1));
+    color: $blueColor;
+  }
+  &__search {
+    max-width: 338px;
+    &__form {
+      display: flex;
+      justify-content: space-between;
+      padding: 2px 0 2px 2px;
+      height: 34px;
+      border-radius: 8px;
+      box-shadow:(0px 4px 12px rgba(0, 0, 0, 0.1));
+      position: relative;
+    }
+    &__input {
+      min-width: 250px;
+      height: 30px;
+      color: #BDBDBD;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 15px;
+      &::placeholder {
+        color: #BDBDBD;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 15px;
+      }
+      &:focus::placeholder {
+        color: transparent;
+      }
+    }
+    &__button {
+      width: 74px;
+      height: 30px;
+      background-color: $blueColor;
+      border-radius: 8px;
+      color: $whiteColor;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 15px;
+      text-align: center;
+    }
+    &__span {
+      background-color: red;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      color: $whiteColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      font-size: 10px;
+      left: 316px;
+      bottom: 21px;
+    }
+  }
+  &__separator {
+    width: 35px;
+    height: 0;
+    border: 1px solid $gray3Color;
+    transform: rotate(90deg);
+  }
+  &__date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow:(0px 4px 12px rgba(0, 0, 0, 0.1));
+    padding: 2px;
+    min-width: 60px;
+    height: 34px;
+  }
+}
+.date {
+  color: $mainColor;
+  &__day {
+    margin-right: 15px;
+  }
+  &__hours {
+    color: $blueColor;
+  }
+  &__divider {
+    color: $blueColor;
+  }
+  &__minutes {
+    color: $blueColor;
+  }
+}
+.transparent {
+  color: transparent;
+}
+.hide {
+  display: none;
+}
+@media screen and (max-width: 860px) {
+  .header__search {
+    &__input{
+      min-width: 100px;
+    }
+    &__span {
+      left: 170px;
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .date__day{
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .header__container {
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .header__separator {
+    display: none;
+  }
+  .header__select-date {
+    gap: 10px;
+  }
+}

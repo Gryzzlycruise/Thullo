@@ -1,0 +1,107 @@
+@import "variables.scss";
+//-----------------------------------------------card-template----------------------------------------------------------
+.card-template {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: $whiteColor;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 12px;
+  &:hover>button {
+    opacity: 1;
+  }
+  &__title{
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: -0.035em;
+    color: $blackColor;
+    margin-bottom: 10px;
+    max-width: 90%;
+  }
+  &__button {
+    border-radius: 8px;
+    background-color: $whiteColor;
+    opacity: 0;
+    max-height: 24px;
+    &__image {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__description {
+    font-family: $secondaryFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.035em;
+    color: $grayTextColor;
+    margin-bottom: 10px;
+  }
+  &__user {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.035em;
+    color: $blueColor;
+  }
+  &__created-at {
+    font-family: $secondaryFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: -0.035em;
+    color: $mainColor;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .card-template {
+    &__title {
+      font-size: 16px;
+    }
+    &__description {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+@media screen and (max-width: 890px) {
+  .card-template {
+    &__title {
+      width: 88%;
+      font-size: 20px;
+      letter-spacing: -0.035em;
+    }
+    &__description {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .card-template {
+    &__title {
+      font-size: 18px;
+      letter-spacing: -0.035em;
+    }
+    &__description {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .card-template {
+    &__title {
+      font-size: 16px;
+    }
+  }
+}

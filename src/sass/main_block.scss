@@ -1,0 +1,83 @@
+@import "variables.scss";
+//-----------------------------------------------main-block-------------------------------------------------------------
+.main-block {
+  width: 100%;
+  &__container {
+    display: flex;
+    min-height: 90vh;
+    justify-content: space-between;
+    background-color: $whiteColor;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 24px 24px 0;
+    &__background {
+      display: flex;
+      justify-content: space-between;
+      gap: 1vw;
+      padding: 24px 24px 0;
+      min-width: 100%;
+      min-height: 90%;
+      background-color: $blueWhiteColor;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 32%;
+    &__title {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    &__title h2{
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: $mainColor;
+      margin-bottom: 17px;
+    }
+    &__cards {
+      max-height: 68vh;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5vw;
+      overflow: scroll;
+      &__in-progress {
+        max-height: 74vh;
+      }
+    }
+  }
+}
+.list {
+  &__todo {
+    &__button{
+      display: flex;
+      justify-content: space-between;
+      color: $blueColor;
+      background-color: $blueButtonColor;
+    }
+  }
+  &__completed {
+    &__button {
+      color: $redColor;
+      background-color: rgba(235, 87, 87, 0.1);
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-block__container {
+    &__background {
+      flex-wrap: wrap;
+      gap: 4vw;
+      padding-bottom: 24px;
+    }
+  }
+  .main-block__list {
+    &__title h2 {
+      margin-bottom: 0;
+    }
+  }
+}
