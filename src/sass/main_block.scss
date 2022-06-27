@@ -81,3 +81,14 @@
     }
   }
 }
+@media screen and (max-width: $mobileTransformWidth) {
+  .main-block {
+    &__list {
+      &__cards {
+        flex-direction: row;
+        overflow-x: scroll;
+        gap: 2vw;
+      }
+    }
+  }
+}
